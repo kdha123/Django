@@ -1,0 +1,63 @@
+pip install django
+--1) django 프로젝트 생성
+django-admin startproject config
+cd config
+dir
+
+--2) 애플리케이션 생성
+python manage.py startapp 애플리케이션명
+python manage.py startapp polls
+MTV(Model Template View)
+
+--3) 애플리케이션 등록(settings.py)
+installed apps 에 polls 추가
+
+--4) 기본 테이블 생성
+python manage.py migrate
+c:\sqlite>sqlite3 d:\study\django\config\db.sqlite3
+.table
+
+--5) 서버실행
+python manage.py runserver
+
+--6)테이블 정의 및 생성
+models.py
+테이블 생성 또는 변경 코드 생성
+python manage.py makemigrations
+테이블 생성 또는 변경 적용
+ python manage.py migrate
+
+--7) 템플릿 파일 생성(index.html)
+--8) 경로 지정(urls.py, views.py)
+자바에서 myfirst.urls.py 는 web.xml
+polls.urls.py 는 FrontController
+views.py 는 Controller 에서 request 해주는 것과 비슷하다.
+
+python manage.py runserver
+
+# 회원관리---------------
+--앱 생성
+python manage.py startapp member
+
+-- 앱 등록
+myfirst/settings.py에 member 추가
+
+-- 테이블 정의 및 생성
+models.py 에서 테이블 정의
+python manage.py makemigrations <-- 테이블 생성
+
+-- 경로지정
+myfirst/urls.py -> member/urls.py -> views.py
+
+--서버 실행
+python manage.py runserver
+http://127.0.0.1:8000/member
+
+
+
+
+
+
+
+
+
