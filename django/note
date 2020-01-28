@@ -52,3 +52,42 @@ myfirst/urls.py -> member/urls.py -> views.py
 --서버 실행
 python manage.py runserver
 http://127.0.0.1:8000/member
+
+#config/polls/templates/polls/test.html---------------
+python manage.py runserver
+http://127.0.0.1:8000/
+myfirst/urls.py
+polls/urls.py
+polls/views.py
+
+#--------------------
+http://127.0.0.1:8000/polls/test
+myfirst/urls.py
+polls/urls.py
+views.test
+
+# config/polls/templates/polls/insert.html---------------
+질문 5개를 등록하세요
+
+# http://127.0.0.1:8000/polls/list.html---------------
+딕셔너리로 request해주고 html에서 쓴다.
+
+# 관리자 페이지-----------
+python manage.py createsuperuser
+abc/1234
+
+1) 관리자 페이지에 Member table을 등록
+2) member/templates/member/insert.html 생성
+    username, pw, hp, name 을 입력 받을 수 있는 form 작성
+  localhost:8000/member/insert ---> insert.html 나타나도록 하세요
+
+
+
+
+
+
+
+
+
+
+

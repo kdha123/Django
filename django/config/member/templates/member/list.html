@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid black;
+      }
+      td {
+        padding: 10px;
+        border: 1px solid red;
+      }
+      </style>
 </head>
 <body>
-list.html
+<table>
+    <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>번호</th>
+    </tr>
+       {% for m in ms %}
+    <tr>
+        <td>{{m.username}}</td>
+        <td>{{m.name}}</td>
+        <td>{{m.hp}}</td>
+    </tr>
+        {%endfor%}
+</table>
 </body>
 </html>
