@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<h2>질문목록</h2>
+<ul>
+
+{% for q in qs %}
+    <li>{{q.question_text}}</li>
+    {%endfor%}
+</ul>
+</body>
+</html>
