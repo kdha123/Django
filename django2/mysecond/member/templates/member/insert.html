@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertForm</title>
+</head>
+<body>
+<h2>회원가입</h2>
+<div>{{err}}</div>
+<form action="." method="post">
+    {% csrf_token %}
+    아이디 : <input type="text" name="username"><br><br>
+    비밀번호 : <input type="pw" name="pw"><br><br>
+    비밀번호확인 : <input type="pw" name="repw"><br><br>
+    이메일 : <input type="email" name="email"><br><br>
+    전화번호 : <input type="text" name="hp"><br><br>
+    이름 : <input type="text"  name="name"><br><br>
+    <button type="submit">등록</button>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+pip install django
+django-admin startproject config
+cd mysecond
+--2) 애플리케이션 생성
+python manage.py startapp 애플리케이션명
+python manage.py startapp polls
+MTV(Models Templates Views)
+
+--3) 애플리케이션 등록(settings.py)
+installed apps 에 polls 추가
+
+--4) 기본 테이블 생성
+python manage.py migrate
+c:\sqlite>sqlite3 d:\study\django\config\db.sqlite3
+.table
+
+--5) 서버실행
+python manage.py runserver
+http://127.0.0.1:8000/admin
+
+--6)테이블 정의 및 생성
+models.py
+테이블 생성 또는 변경 코드 생성(polls에 있는 것만)
+python manage.py makemigrations polls
+테이블 생성 또는 변경 적용
+ python manage.py migrate
+
+--7) 템플릿 파일 생성(index.html)
+--8) 경로 지정(urls.py, views.py)
+자바에서 myfirst.urls.py 는 web.xml
+polls.urls.py 는 FrontController
+views.py 는 Controller 에서 request 해주는 것과 비슷하다.
+
+python manage.py runserver
+
+--9)관리자
+계정 생성
+python manage.py createsuperuser
+abc/1234
+
+테이블 등록
+admin.py 에 테이블을 등록
+admin.site.register(Question)
+
+관리자 페이지 기능확장(수정)
+class QuestionAdmin(admin.ModelAdmin):
+    #필드 순서변경
+    #fields=['pub_date','question_text']
+    #필드 분리
+    fieldsets = [('질문',{'fields':['question_text']}),
+                 # ('일자',{'fields':['pub_date']})
+                 ('일자',{'fields':['pub_date'],'classes':['collapse']})
+                ]#필드접기
+admin.site.register(Question,QuestionAdmin)
+admin.site.register(Choice)
+# 한 화면에 출력하기 - stackInline
+============
+
+==========회원관리
+2번부터 다시 실행
