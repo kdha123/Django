@@ -58,3 +58,23 @@ admin.site.register(Choice)
 
 ==========회원관리
 2번부터 다시 실행
+D:\study\django2\mysecond\templates\member\index.html
+D:\study\django2\mysecond\templates\member\list.html
+D:\study\django2\mysecond\templates\member\detail.html
+
+#=========템플릿파일 작성===============
+mysecond\templates\base.html
+settings.py
+
+#----
+f = open('data\\names.csv','r') 윈도우
+f = open('data/names.csv','r') 리눅스, 맥
+f = open(os.path.join('data','names.csv'),'r')
+
+#---------------css 적용
+static 파일: css, js, 이미지 등
+mysecond\static\winter.css
+settings.py -> STATICFILES_DIR 추가하고 base.html에 <link>태그 추가
+
+#-----------------
+D:\study\django2\mysecond\templates\polls\list.html

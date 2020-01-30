@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title%}회원보기{% endblock %}
+{% block content %}
+<h2>detail.html</h2>
+<p/>
+<table width="500" border="1">
+    <tr>
+        <td width="30%">id</td><td>{{m.id}}</td>
+    </tr>
+    <tr>
+        <td width="30%">name</td><td>{{m.username}}</td>
+    </tr>
+    <tr>
+        <td width="30%">hp</td><td>{{m.hp}}</td>
+    </tr>
+    <tr>
+        <td width="30%">email</td><td>{{m.email}}</td>
+    </tr>
+</table>
+<a href="/member/list">목록으로</a>
+{% endblock %}

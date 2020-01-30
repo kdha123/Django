@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>질문리스트</title>
+</head>
+<body>
+<h2>질문리스트</h2>
+<hr>
+<ul>
+    {% for q in ql %}
+    <li><a href="/polls/{{q.id}}">{{ q.id }}</a> - {{ q.question_text}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

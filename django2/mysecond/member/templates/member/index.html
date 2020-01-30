@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h2>index.html</h2>
+<p></p>
+{% for n in names %}
+    <div>{{ n }}</div>
+    <hr>
+{% endfor %}
+----------------------
+{% for c in colors %}
+    <div>{{ c|upper }}</div>
+    <div>{{ c|length }}</div>
+{% endfor %}
+-----------------------
+{% for num in numbers %}
+    <div>{{ num }} - {{num|add:"3"}}</div>
+{% endfor %}
+</body>
+</html>
