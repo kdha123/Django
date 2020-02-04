@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'base_books.html'%}
+{%block content%}
 <h2>books/author_list.html</h2>
 <p/>
 <ol>
@@ -12,5 +7,6 @@
     <li><a href="{% url 'books:author_detail' a.id%}">{{a.name}}</a></li>
     {% endfor %}
 </ol>
-</body>
-</html>
+<p/>
+<a href="{%url 'books:author_insert'%}">등록</a>
+{%endblock%}

@@ -20,7 +20,16 @@ class Publisher(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=50)
-    intro = models.CharField(max_length=100)
+    intro = models.TextField()
     email = models.EmailField()
+    photo=models.ImageField(upload_to='photos/%Y', default='photos/noimg.png')
     def __str__(self):
         return self.name
+    def save(self, *args, **kwargs):
+        try:
+            old = Author.objects.get(id=self.id)
+            if old.photo != self.photo:
+                old.photo.delete(save=False)
+        except:
+            pass
+        super(Author, self).save(*args, **kwargs)

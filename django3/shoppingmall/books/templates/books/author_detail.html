@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'base_books.html'%}
+{%block content%}
 <h2>books/author_detail.html</h2>
 <p/>
+<div>사진 : {{object.photo.url}}
+    <img src="{{object.photo.url}}"/>
+</div><br>
 <div>이름 : {{object.name}}</div>
 <div>자기소개 : {{object.intro}}</div>
 <div>이메일 : {{object.email}}</div>
 <p/>
-<a href="{%url 'books:author_list'%}">목록으로</a>
-
-</body>
-</html>
+<a href="{%url 'books:author_list'%}">저자목록으로</a>&nbsp;&nbsp;&nbsp;
+<a href="{%url 'books:author_update' object.id%}">수정하기</a>&nbsp;&nbsp;&nbsp;
+<a href="{%url 'books:author_delete' object.id%}">삭제하기</a>&nbsp;&nbsp;&nbsp;
+{%endblock%}

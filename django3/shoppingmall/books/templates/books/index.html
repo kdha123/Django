@@ -1,0 +1,12 @@
+{%extends 'base_books.html'%}
+{%block content%}
+<h2>books/index.html</h2>
+<p/>
+<ol>
+{%for k in kind%}
+    {% with 'books:'|add:k|add:'_list' as url1%}
+    <li><a href="{%url url1%}">{{k}}</a></li>
+    {%endwith%}
+{%endfor%}
+</ol>
+{%endblock%}

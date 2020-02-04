@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>books/author_delete.html(저자 삭제)</h2>
+<p/>
+{{object.name}}
+<p/>
+<form method="post">
+    {%csrf_token%}
+    <input type="submit" value="삭제">
+</form>
+</body>
+</html>

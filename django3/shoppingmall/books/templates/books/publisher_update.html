@@ -1,0 +1,10 @@
+{%extends 'base_books.html'%}
+{%block content%}
+<h2>books/publisher_update.html(출판사 수정)</h2>
+<p/>
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="수정">
+</form>
+{%endblock%}

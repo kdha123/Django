@@ -1,0 +1,11 @@
+{%extends 'base_books.html'%}
+{%block content%}
+<h2>books/publisher_delete.html(출판사 삭제)</h2>
+<p/>
+{{object.name}}
+<p/>
+<form method="post">
+    {%csrf_token%}
+    <input type="submit" value="삭제">
+</form>
+{%endblock%}

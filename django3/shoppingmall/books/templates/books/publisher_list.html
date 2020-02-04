@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'base_books.html'%}
+{%block content%}
 <h2>books/publisher_list.html</h2>
 <p/>
 <ol>
 {% for p in object_list %}
-    <li><a href="{% url 'books:publisher_detail' p.id%}">{{p.name}}</li>
+    <li><a href="{% url 'books:publisher_detail' p.id%}">{{p.name}}</a></li>
 {% endfor%}
 </ol>
-</body>
-</html>
+<p/>
+<a href="{%url 'books:publisher_insert'%}">등록</a>
+{%endblock%}
