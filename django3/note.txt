@@ -1,0 +1,31 @@
+create database bookdb character set utf8;
+show databases;
+create user 'tom'@'localhost' identified by 'jerry';
+grant all privileges on bookdb.* to 'tom'@'localhost';
+flush privileges;
+
+-----
+pip install django
+django-admin startproject mall
+cd shoppingmall
+python manage.py startapp books --> templates 폴더 만들기
+-- > settings.py에 등록
+
+-------MariaDB 연동
+pip install mysqlclient
+settings.py
+
+------기본테이블 생성
+python manage.py migrate
+
+-------모델정의 및 구현
+models.py
+python manage.py makemigrations books
+python manage.py migrate books
+
+---관리자 페이지 등록(admin.py) 및 관리자 생성, 서버실행
+python manage.py createsuperuser
+python manage.py runserver
+
+-----클래스형 뷰 : 입력, 수정, 삭제 등 자주 사용되는 로직을 미리 개발
+== http://127.0.0.1:8000/books/publisher/ 출판사 목록

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>books/book_list.html</h2>
+<ol>
+{% for b in object_list %}
+    <li><a href="{% url 'books:book_detail' b.id%}">{{b.title}}</a></li>
+    {% endfor %}
+</ol>
+</body>
+</html>

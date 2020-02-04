@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>books/author_insert.html(저자 등록)</h2>
+<p/>
+<!-- 가로 등록 폼 -> input tag 전체가 p tag로 감싸져 있다. -->
+<!--{{ form }}-->
+<form method="post">
+    {% csrf_token %}
+    <!-- as_p: 세로 등록 폼 -> input tag가 p tag로 각각 감싸져 있다. -->
+    <!-- as_p, as_ul, as_table -->
+   <table width="500" border="1">
+       {{ form.as_table }}
+       <tr>
+           <td colspan="2" align="center">
+               <input type="submit" value="등록"/>
+           </td>
+       </tr>
+   </table>
+</form>
+</body>
+</html>
